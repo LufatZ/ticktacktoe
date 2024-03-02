@@ -13,6 +13,6 @@ public class Player {
             int player = playerNumber - 1;
             return playerList.get(player).name;
         }
-        return null;
+        return "";
     }
 }

@@ -10,10 +10,12 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.9.1"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
 }
+val mainClass = "Main"
 
-tasks.test {
-    useJUnitPlatform()
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = mainClass
+    }
+    from(sourceSets.main.get().output)
 }
