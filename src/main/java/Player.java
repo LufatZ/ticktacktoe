@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,5 +15,15 @@ public class Player {
             return playerList.get(player).name;
         }
         return "";
+    }
+    public static Color getPlayerColor(int player){
+        if (player == 1){
+            return Color.BLUE;
+        }
+        return Color.RED;
+    }
+
+    public static void setPlayer(String playerName){
+        Player player = new Player(playerName);
     }
 }
